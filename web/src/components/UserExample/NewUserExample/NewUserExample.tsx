@@ -1,10 +1,10 @@
+import type { CreateUserExampleInput } from 'types/graphql'
+
 import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import UserExampleForm from 'src/components/UserExample/UserExampleForm'
-
-import type { CreateUserExampleInput } from 'types/graphql'
 
 const CREATE_USER_EXAMPLE_MUTATION = gql`
   mutation CreateUserExampleMutation($input: CreateUserExampleInput!) {

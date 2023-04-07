@@ -1,14 +1,14 @@
+import type {
+  DeleteUserExampleMutationVariables,
+  FindUserExamples,
+} from 'types/graphql'
+
 import { Link, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import { QUERY } from 'src/components/UserExample/UserExamplesCell'
 import { truncate } from 'src/lib/formatters'
-
-import type {
-  DeleteUserExampleMutationVariables,
-  FindUserExamples,
-} from 'types/graphql'
 
 const DELETE_USER_EXAMPLE_MUTATION = gql`
   mutation DeleteUserExampleMutation($id: Int!) {

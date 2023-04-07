@@ -14,17 +14,18 @@
 # See https://redwoodjs.com/docs/deploy/baremetal for more info
 
 [[production.servers]]
-host = "server.com"
-username = "user"
+host = "chicago.tobbe.dev"
+username = "baremetal"
+privateKeyPath = "/Users/tobbe/.ssh/id_ed25519"
 agentForward = true
 sides = ["api","web"]
 packageManagerCommand = "yarn"
 monitorCommand = "pm2"
-path = "/var/www/app"
-processNames = ["serve"]
-repo = "git@github.com:myorg/myapp.git"
+path = "/var/www/rw-vite-streaming"
+processNames = ["api", "fe"]
+repo = "git@github.com:tobbe/rw-vite-streaming.git"
 branch = "main"
-keepReleases = 5
+keepReleases = 3
 
 # If you have separate api and web servers:
 #
